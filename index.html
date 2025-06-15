@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHALE Initiative – Modern Revamp</title>
+  <meta name="description" content="Welcome to the next-gen Wayanad House AI-ML Enthusiasts Interest Group">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body x-data="{ dark: false, menu: false }" :class="{ 'dark': dark }" class="font-sans bg-gradient-to-br from-blue-50 to-purple-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500">
+
+  <!-- Header -->
+  <header class="fixed w-full z-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur shadow">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="#" class="flex items-center gap-2 text-2xl font-bold text-blue-700 dark:text-purple-300">
+        <img src="https://cdn-icons-png.flaticon.com/128/1864/1864513.png" alt="Logo" class="w-12 h-12 rounded-full shadow-lg"> WHALE
+      </a>
+      <div class="hidden md:flex gap-8 items-center font-semibold">
+        <a href="#home" class="hover:text-blue-500 dark:hover:text-purple-300 transition">Home</a>
+        <a href="#about" class="hover:text-blue-500 dark:hover:text-purple-300 transition">About</a>
+        <a href="#features" class="hover:text-blue-500 dark:hover:text-purple-300 transition">Features</a>
+        <a href="#team" class="hover:text-blue-500 dark:hover:text-purple-300 transition">Team</a>
+        <a href="#contact" class="hover:text-blue-500 dark:hover:text-purple-300 transition">Contact</a>
+        <button @click="dark = !dark" class="ml-4 text-2xl focus:outline-none">
+          <i :class="dark ? 'fas fa-moon text-purple-300' : 'fas fa-sun text-yellow-400'"></i>
+        </button>
+      </div>
+      <button @click="menu = !menu" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <div x-show="menu" class="md:hidden bg-white dark:bg-gray-900 px-6 py-4 space-y-2">
+      <a href="#home" class="block">Home</a>
+      <a href="#about" class="block">About</a>
+      <a href="#features" class="block">Features</a>
+      <a href="#team" class="block">Team</a>
+      <a href="#contact" class="block">Contact</a>
+      <button @click="dark = !dark" class="mt-2 text-xl focus:outline-none">
+        <i :class="dark ? 'fas fa-moon text-purple-300' : 'fas fa-sun text-yellow-400'"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 dark:from-gray-800 dark:to-gray-900 text-white relative overflow-hidden">
+    <div class="container mx-auto px-4 text-center z-10">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-in-down">AI-ML, Reimagined.</h1>
+      <p class="text-xl md:text-2xl mb-10 font-medium">Curious about Machine Learning? Start your journey with us.</p>
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="archives" class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold shadow hover:bg-blue-100 transition">Get Started</a>
+        <a href="/ml/events/epochs" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-blue-600 transition">Article Contest</a>
+      </div>
+    </div>
+    <!-- Subtle background animation (optional) -->
+    <div class="absolute inset-0 pointer-events-none z-0">
+      <!-- Put SVG or canvas animation here for extra modern touch -->
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12">Our Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl shadow-lg hover:scale-105 transition">
+          <i class="fas fa-brain text-4xl text-blue-500 dark:text-purple-300 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Problem Solving</h3>
+          <p>Sharpen your skills with curated challenges.</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl shadow-lg hover:scale-105 transition">
+          <i class="fas fa-laptop-code text-4xl text-blue-500 dark:text-purple-300 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Hands-On Projects</h3>
+          <p>Build real-world ML projects with peers.</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl shadow-lg hover:scale-105 transition">
+          <i class="fas fa-lightbulb text-4xl text-blue-500 dark:text-purple-300 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Knowledge Hub</h3>
+          <p>Access resources and learning paths curated for you.</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl shadow-lg hover:scale-105 transition">
+          <i class="fas fa-users text-4xl text-blue-500 dark:text-purple-300 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Community</h3>
+          <p>Connect, collaborate, and grow with ML enthusiasts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gradient-to-r from-purple-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <img src="/ml/assets/images/logicloom/2.jpg" alt="About Us" class="rounded-2xl shadow-2xl w-full object-cover">
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">About Us</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          Launched in Wayanad in October 2023, our initiative has become a hub for AI-ML learning and collaboration, with 1000+ unique participants and support from IITM and industry experts.
+        </p>
+        <a href="archives" class="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">Meet the Team</h2>
+      <p class="text-center text-gray-500 dark:text-gray-300 mb-12">The minds and hearts behind WHALE Initiative</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        <!-- Team Member Card Example -->
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition group">
+          <img src="assets/images/team/member1.jpg" alt="Rohit" class="w-28 h-28 rounded-full shadow-lg mb-4 object-cover border-4 border-white group-hover:border-blue-400 transition">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">Somsubhra</h3>
+          <p class="text-blue-500 dark:text-purple-300 font-medium mb-2">Core</p>
+          <p class="text-gray-500 dark:text-gray-300 text-center mb-4">text here</p>
+          <div class="flex gap-3">
+            <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <!-- Repeat for more team members -->
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition group">
+          <img src="assets/images/team/member2.jpg" alt="Aisha" class="w-28 h-28 rounded-full shadow-lg mb-4 object-cover border-4 border-white group-hover:border-blue-400 transition">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">Advait</h3>
+          <p class="text-blue-500 dark:text-purple-300 font-medium mb-2">Core</p>
+          <p class="text-gray-500 dark:text-gray-300 text-center mb-4">text here</p>
+          <div class="flex gap-3">
+            <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 bg-gradient-to-r from-purple-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">FAQ</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+          <h3 class="font-semibold text-lg mb-2">Who can join?</h3>
+          <p>Anyone interested in ML, regardless of background or location.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+          <h3 class="font-semibold text-lg mb-2">Is it free?</h3>
+          <p>Yes, all our events and resources are free for participants.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+          <h3 class="font-semibold text-lg mb-2">What do I need to start?</h3>
+          <p>Just curiosity! We provide beginner-friendly resources and a supportive community.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+          <h3 class="font-semibold text-lg mb-2">What topics are covered?</h3>
+          <p>Python, ML, NLP, and more—with a focus on logic and creativity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">Contact Us</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg p-8">
+          <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+          <p class="mb-4">Join our WhatsApp group to connect with ML enthusiasts:</p>
+          <a href="https://chat.whatsapp.com/HGA056Buywy9R6QHOPGmwe" target="_blank" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition">Join WhatsApp Group</a>
+        </div>
+        <div class="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg p-8">
+          <h3 class="text-xl font-semibold mb-4">Questions?</h3>
+          <p class="mb-2">General: <a href="mailto:wayanad-studrel@ds.study.iitm.ac.in" class="text-blue-500 hover:underline">wayanad-studrel@ds.study.iitm.ac.in</a></p>
+          <p>Events: <a href="mailto:wayanad-ml@ds.study.iitm.ac.in" class="text-blue-500 hover:underline">wayanad-ml@ds.study.iitm.ac.in</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">WHALE Initiative</h3>
+        <p class="mb-2">ML made fun!</p>
+        <div class="flex gap-4">
+          <a href="https://www.instagram.com/wayanad_iitm/" target="_blank" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/iitm-wayanad-house/" target="_blank" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@wayanadhouseiitm" target="_blank" class="hover:text-red-400"><i class="fab fa-youtube"></i></a>
+          <a href="https://chat.whatsapp.com/HGA056Buywy9R6QHOPGmwe" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Useful Links</h3>
+        <ul>
+          <li><a href="/ml/" class="hover:text-blue-400">Home</a></li>
+          <li><a href="archives" class="hover:text-blue-400">Video Archives</a></li>
+          <li><a href="gallery" class="hover:text-blue-400">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="text-sm">
+        <h3 class="text-xl font-semibold mb-2">Disclaimer</h3>
+        <p>This portal is hosted solely for the convenience of the student community, and the institute or IITM BS program does not endorse or assume responsibility for the content, products, or services provided here. 
+                    Neither the institute nor the initiative team, house council will be responsible for any issues arising if any from using this site.</p>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-4 text-center text-xs">
+      &copy; 2025 WHALE Team. All rights reserved.
+    </div>
+  </footer>
+
+
+</body>
+</html>
